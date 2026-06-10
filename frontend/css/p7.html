@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <style>
+        .container{
+            width: 500px;
+            height: 300px;
+            background-color: lightblue;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: lightcoral;
+        }
+        .box:hover{
+            background-color: lightgreen;
+        }
+
+        .container .progress{
+            width:100%;
+            height: 20px;
+            background-color: lightcoral;
+        }
+
+         .container1{
+            width: 90%;
+            height: 25px;
+            background-color: lightblue;
+            position: relative;
+            left: 20px;
+            border: 4px solid black;
+            border-radius: 10px;
+         }
+         .progress{
+            
+            height: 100%;
+            background-color: green;
+            border-radius: 10px;
+            animation: progressAnimation 3s ;
+         }
+         @keyframes progressAnimation {
+            0% { width: 0%; }
+            90% { width: 90%; }
+            95% { width: 70%; }
+            100% { width: 100%; }
+         }
+            
+    </style>
+    <title>Practice 7</title>
+    
+</head>
+
+<body>
+    <div class="container"> div
+        
+        <div class="box"> box1</div>
+        <div class="box"> box2 </div>
+        <div class="box"> box3 </div>        
+
+    </div>
+
+    <div class="container1"> 
+        
+        <div class="progress"> </div>
+     </div>   
+    
+</body>
+</html>
