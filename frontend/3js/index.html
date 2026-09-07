@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        #container{
+            display: flex;
+        }
+        #b1{
+            width: 150px;
+            height: 40px;
+            background-color: antiquewhite;
+            margin: 5px;
+            border-radius: 2px;
+        }
+        #b2{
+            width: 150px;
+            height: 40px;
+            background-color: green;
+            margin: 5px;
+            border-radius: 2px;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="container">
+        <button class="b" id="b1" onclick="console.log(bag+=1);document.querySelector('.bag').innerText=`Bag has ${bag} item`;">Add to cart</button>
+        <button class="b" id="b2" onclick="console.log(bag-=1); document.querySelector('.bag').innerText=`Bag has ${bag} item`;">Move to wishlist</button>
+        <button class="b" id="b2" onclick="console.log(bag+=2); document.querySelector('.bag').innerText=`Bag has ${bag} item`;">Add to item</button>
+    </div>
+
+    <h1 class="bag">bag have Nothing</h1>
+    
+    
+    
+    <script>
+       let bag=0;
+
+       document.querySelector('.bag').innerText=`Bag has ${bag} item`;
+       
+    </script>
+    
+</body>
+</html>

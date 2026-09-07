@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        #btn{
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+    
+    <title>p1</title>
+</head>
+<body>
+
+    <h1 id="greeting"></h1>
+    <button id="btn" onclick="btnclick()"></button>
+
+    <script>
+
+        let count= localStorage.getItem('count') || 0;
+        document.querySelector('#btn').innerText = count;
+
+        function btnclick(){
+           
+           let btn= document.querySelector('#btn');
+           count++;
+           btn.innerText=count;
+           localStorage.setItem('count',count);
+
+        }
+
+
+        function dogreeting(){
+            let date=new Date();
+            let hour= date.getHours;
+            let heading=document.querySelector('#greeting');
+
+            if(hour<12){
+                 heading.innerText='good morning'
+                }
+            else {
+                heading.innerText='good afternoon'
+            }
+    }
+
+        dogreeting();
+
+
+
+        function particularPostion(){
+
+            
+
+        }
+
+        let num=0;
+
+        let counts = () => {
+            num++;
+            console.log(num);
+
+        };
+        counts(); // 1
+        counts(); // 2
+        counts();
+
+            </script>
+    
+</body>
+</html>

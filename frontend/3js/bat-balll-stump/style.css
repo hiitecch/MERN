@@ -1,0 +1,155 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Orbitron',sans-serif;
+}
+
+body{
+    background:#0b0f1a;
+    background-image:radial-gradient(circle at top,#16213e,#0b0f1a 60%);
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    color:#00e5ff;
+}
+
+h1{
+    font-size:3rem;
+    margin-bottom:40px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    color:#00e5ff;
+    text-shadow:
+        0 0 8px #00e5ff,
+        0 0 18px #00e5ff,
+        0 0 35px #008cff;
+}
+
+#choice-container{
+    display:flex;
+    gap:35px;
+    flex-wrap:wrap;
+    justify-content:center;
+    margin-bottom:40px;
+}
+
+.choice-button{
+    width:160px;
+    height:160px;
+    border:3px solid #00e5ff;
+    border-radius:50%;
+    background:#101828;
+    cursor:pointer;
+    transition:.35s;
+    box-shadow:
+        0 0 15px #00e5ff55,
+        inset 0 0 12px #00e5ff33;
+}
+
+.choice-button:hover{
+    transform:translateY(-10px) scale(1.08);
+    background:#132238;
+    box-shadow:
+        0 0 25px #00e5ff,
+        0 0 45px #008cff;
+}
+
+.choice-button:active{
+    transform:scale(.95);
+}
+
+.choice-image{
+    width:90px;
+    height:90px;
+    object-fit:contain;
+}
+
+#user-move,
+#computer-move,
+#result,
+#score{
+    width:650px;
+    max-width:90%;
+    margin:12px 0;
+    padding:16px;
+    text-align:center;
+    border:2px solid #00e5ff;
+    border-radius:12px;
+    background:#111827;
+    box-shadow:0 0 15px #00e5ff33;
+}
+
+#user-move,
+#computer-move{
+    color:#d7ffff;
+    font-size:20px;
+}
+
+#result{
+    color:#39ff14;
+    font-size:28px;
+    font-weight:bold;
+    text-shadow:0 0 12px #39ff14;
+}
+
+#score{
+    color:#ffd700;
+    font-size:24px;
+    font-weight:bold;
+    text-shadow:0 0 8px #ffd700;
+}
+
+.reset-btn{
+    margin-top:30px;
+    padding:14px 40px;
+    font-size:18px;
+    font-weight:bold;
+    letter-spacing:2px;
+    color:#0b0f1a;
+    background:#00e5ff;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    transition:.3s;
+    box-shadow:0 0 18px #00e5ff;
+}
+
+.reset-btn:hover{
+    background:#39ff14;
+    box-shadow:0 0 22px #39ff14;
+}
+
+.reset-btn:active{
+    transform:scale(.95);
+}
+
+@media(max-width:768px){
+
+    h1{
+        font-size:2rem;
+    }
+
+    .choice-button{
+        width:120px;
+        height:120px;
+    }
+
+    .choice-image{
+        width:65px;
+        height:65px;
+    }
+
+    #user-move,
+    #computer-move,
+    #result,
+    #score{
+        width:95%;
+        font-size:18px;
+    }
+}

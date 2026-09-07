@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Stone Paper Scissors Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Stone Paper Scissors Game</h1>
+
+  <div id="choice-container">
+
+    <!-- Stone -->
+    <button class="choice-button" onclick="
+      let computerChoice = generateComputerChoice();
+      let resultMsg = getResult('Stone', computerChoice);
+      showResult('Stone', computerChoice, resultMsg);
+    ">
+      <img src="images/stone.png" alt="Stone Image" class="choice-image">
+    </button>
+
+    <!-- Paper -->
+    <button class="choice-button" onclick="
+      computerChoice = generateComputerChoice();
+       resultMsg = getResult('Paper', computerChoice);
+      showResult('Paper', computerChoice, resultMsg);
+    ">
+      <img src="images/paper.png" alt="Paper Image" class="choice-image">
+    </button>
+
+    <!-- Scissors -->
+    <button class="choice-button" onclick="
+       computerChoice = generateComputerChoice();
+       resultMsg = getResult('Scissors', computerChoice);
+      showResult('Scissors', computerChoice, resultMsg);
+    ">
+      <img src="images/scissor.png" alt="Scissors Image" class="choice-image">
+    </button>
+
+  </div>
+
+  <h3 id="user-move"></h3>
+  <h3 id="computer-move"></h3>
+  <h3 id="result"></h3>
+  <h3 id="score"></h3>
+
+  <button class="reset-btn" onclick="
+    localStorage.clear();
+    resetScore();
+  ">
+    Reset
+  </button>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
